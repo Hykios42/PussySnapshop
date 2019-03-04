@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+#Item.destroy_all
+
+puts "Création d'items"
+pic_count = 1
+20.times do 
+  item = Item.create!(title: Faker::Book.title, description: Faker::Hacker.say_something_smart, price: Faker::Number.between(1, 1000), image_url: "pussycat#{pic_count}.jpg")
+  puts item.image_url
+  pic_count += 1
+end
+puts "Items créés !"

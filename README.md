@@ -1,25 +1,24 @@
-# PussySnapShot 
+# README
 
-### Site vente des photos de chat.te les plus chaud.e.s de ta région
-![](https://media.giphy.com/media/l0HlUxUu3CqVAbees/giphy.gif)
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-### Le Trello du projet [=> Ici <=](https://trello.com/b/1SSYP56s/e-commerce-pussysnapshot)
+Things you may want to cover:
 
-## Description du projet 
-*Work in progress*
+* Ruby version
 
+* System dependencies
 
+* Configuration
 
-## Lien en prod
-[PussySnapShot](https://pussysnapshot-prod.herokuapp.com/)
+* Database creation
 
-## Projet réalisé par la team Montpellier : 
- - [Hicham](https://github.com/orgs/beachandsun/people/hich34)
- - [Emma](https://github.com/orgs/beachandsun/people/emcalvet)
- - [Charles](https://github.com/orgs/beachandsun/people/Hydref)
- - [Karel](https://github.com/orgs/beachandsun/people/Karel2)
- - [Jimmy](https://github.com/orgs/beachandsun/people/Hykios42)
+* Database initialization
 
+* How to run the test suite
 
-![](https://media.giphy.com/media/l3972NsEV9WmulnWw/giphy.gif)
-..-.-..
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

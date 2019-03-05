@@ -4,6 +4,13 @@
       <h1><%= current_item.title %></h1>
       <p><%= image_tag current_item.image_url, width: 200 %> <%= current_item.price %> € </p>
       <p><em><%= current_item.description %><em></p>
+
+ <%# if is_not_linked_to?(@creator) %> 
+<%= link_to "ajouter au panier", cart_items_create_path(current_item.id) class="" %>  <!-- faire marcher le buttn -->
+<%# elsif  current_user == @creator %>
+<%#= link_to "Gestion de l'évènement", edit_event_path(@event.id), class:"" %>
+
+
     </div>
   </div>
 </div>

@@ -50,7 +50,8 @@ Rails.application.configure do
   config.assets.debug = true
 
   # Suppress logger output for asset requests.
-  config.assets.quiet = true
+  config.assets.quiet = t quit
+  rue
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
@@ -58,4 +59,7 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  config.action_mailer.default_url_options = { :host => 'pussysnapshot-dev.herokuapp.com' }
+ / config.action_mailer.delivery_method = :letter_opener /
+  config.action_mailer.perform_deliveries = true
 end

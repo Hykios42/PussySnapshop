@@ -9,13 +9,11 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
  */
 
-// Custom bootstrap variables must be set or imported *before* bootstrap.
-@import "bootstrap";
 
-//= require css/bootstrap.css
-//= require css/icon_font-awesome.css
-//= require css/icon_themify.css
-//= require css/theme.css
+
+//= require theme
+//= require bootstrap
+//= require icon_font-awesome
+//= require icon_themify

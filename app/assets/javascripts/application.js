@@ -16,7 +16,7 @@
 //= require_tree .
 //= require jquery3
 //= require popper
-//= require bootstrap
-//= require js/custom.js
-//= require js/jquery.min.js
-//= require js/maps.js
+//= require bootstrap-sprockets
+//= require custom
+//= require jquery.min
+//= require map

@@ -34,7 +34,19 @@ puts "Paniers créés !"
 
 puts "Création de commandes"
 25.times do
-  order = Order.create!(item_id: rand(Item.all.first.id..Item.all.last.id), user_id: rand(User.all.first.id..User.all.last.id))
+  order = Order.create!(user_id: rand(User.all.first.id..User.all.last.id))
   #puts order
 end
 puts "Commandes créées !"
+
+puts "Création de la table intermédiaire CartItem"
+25.times do
+  cart_item = CartItem.create!(cart_id: rand(Cart.all.first.id..Cart.all.last.id), item_id: rand(Item.all.first.id..Item.all.last.id))
+end
+puts "Table créée"
+
+puts "Création de la table intermédiaire OrderItem"
+15.times do
+  order_item = CartItem.create!(cart_id: rand(Cart.all.first.id..Cart.all.last.id), item_id: rand(Item.all.first.id..Item.all.last.id))
+end
+puts "Table créée"

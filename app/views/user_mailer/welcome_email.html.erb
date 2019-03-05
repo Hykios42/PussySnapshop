@@ -1,1 +1,19 @@
-<h1> welcome mail <h1>
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+
+  <body>
+    <h1>Salut et bienvenue parmi nous !</h1>
+    <p>
+      Tu t'es inscrit sur notre boutique de photos de chatons en utilisant l'e-mail suivant : <%= @user.email %>.
+    </p>
+    <p>
+      Pour accéder à ton espace client, connecte-toi <a href="<% @url %>">ici</a>.
+    </p>
+    <p> À très vite sur Pussysnapshot !
+  </body>
+
+</html>

@@ -69,4 +69,16 @@ gem 'faker'
 gem 'dotenv-rails'
 gem 'devise'
 gem 'rb-readline'
-gem 'stripe' 
+gem 'stripe'
+
+
+
+
+
+
+
+
+gem 'jquery-rails'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'autoprefixer-rails'
+gem 'font-awesome-rails'

@@ -71,3 +71,4 @@ gem 'rb-readline'
 
 gem 'table_print'
 gem 'faker'
+

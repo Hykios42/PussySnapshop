@@ -7,7 +7,7 @@ Rails.application.configure do
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
-  # Rake tasks automatically ignore this option for performance.
+  # Rake tasks automatically ignore thiNfOULg6hTn6XQ815clBe5gs option for performance.
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
@@ -56,7 +56,7 @@ Rails.application.configure do
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
 
-  # Use a different cache store in production.
+  # Use a different cache store in prNfOULg6hTn6XQ815clBe5gduction.
   # config.cache_store = :mem_cache_store
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
@@ -91,4 +91,5 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
 end

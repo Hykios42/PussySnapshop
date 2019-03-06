@@ -6,10 +6,11 @@
       <p><em><%= current_item.description %><em></p>
 
  <%# if is_not_linked_to?(@creator) %> 
-<%= link_to "ajouter au panier", cart_items_create_path(current_item.id) class="" %>  <!-- faire marcher le buttn -->
+<%#= link_to "ajouter au panier", cart_items_path(current_item.id) %>  <!-- faire marcher le buttn -->
 <%# elsif  current_user == @creator %>
 <%#= link_to "Gestion de l'évènement", edit_event_path(@event.id), class:"" %>
 
+<%=link_to "Ajouter au panier", item_cart_items_path(current_item.id), method: :post %>
 
     </div>
   </div>

@@ -11,7 +11,7 @@ Item.destroy_all
 puts "Création de produits"
 pic_count = 1
 20.times do 
-  item = Item.create!(title: Faker::Book.title, description: Faker::Hacker.say_something_smart, price: Faker::Number.between(1, 1000), image_url: "pussycat#{pic_count}.jpg")
+  item = Item.create!(title: Faker::Book.title, description: Faker::Hacker.say_something_smart, price: Faker::Number.between(1, 1000), image_url: "kittens/pussycat#{pic_count}.jpg")
   pic_count += 1
 end
 puts "Produits créés !"

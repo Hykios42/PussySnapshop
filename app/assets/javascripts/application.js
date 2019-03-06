@@ -16,4 +16,13 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+<<<<<<< HEAD
 
+=======
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
+//= require custom
+//= require jquery.min
+//= require map
+>>>>>>> f35670041f759d7e0f75bdc58e7cbcd56c31872a

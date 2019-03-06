@@ -66,19 +66,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'table_print'
 gem 'faker'
+
 gem 'dotenv-rails'
 gem 'devise'
 gem 'rb-readline'
-gem 'stripe'
+gem 'stripe' 
 
-
-
-
-
-
-
+gem 'bootstrap', '~> 4.3.1'
 
 gem 'jquery-rails'
-gem 'bootstrap-sass', '~> 3.3.6'
-gem 'autoprefixer-rails'
+
 gem 'font-awesome-rails'

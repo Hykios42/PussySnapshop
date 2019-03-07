@@ -10,9 +10,10 @@ class CartItemsController < ApplicationController
     puts "---------------------------"
       @add_item_to_cart = CartItem.new(cart_id: Cart.find_by(user_id: current_user).id ,item_id: params[:item_id])
       if @add_item_to_cart.save
-        puts('ok');
+        redirect_to show_path, :flash => { :error => "Insufficient rights!" }
+        puts('ok')
       else
-        puts('fuckk');
+        puts('fuckk')
         
       end
   end

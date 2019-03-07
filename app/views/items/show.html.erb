@@ -1,7 +1,4 @@
 <br>
-        <!-- Page Body Content Wraper -->
-        <div class="page-content-wraper">
-       
 
             <!--Page Content -->
             <section class="content-page">
@@ -14,18 +11,12 @@
                                 <!-- Slick Image Slider -->
                                 <div class="product-image-slider product-image-gallery" id="product-image-gallery" data-pswp-uid="3">
                                     <div class="item">
-                                        <a class="product-gallery-item" href="current_item.image_url" data-size="" data-med="current_item.image_url" data-med-size="">
+                                        <a class="product-gallery-item" href="#" data-size="" data-med="#" data-med-size="">
                                             <%= image_tag current_item.image_url, width: 200 %>
                                         </a>
                                     </div>
-                                    
                                 </div>
-                                <!-- End Slick Image Slider -->
-
-                                <a href="javascript:void(0)" id="zoom-images-button" class="zoom-images-button"><i class="fa fa-expand" aria-hidden="true"></i></a>
-
                             </div>
-
                         </div>
                         <!-- End Product Image -->
 
@@ -37,7 +28,7 @@
                                     <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
                                         <span style="width: 60%"></span>
                                     </div>
-                                    <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
+                                    
                                 </div>
                                 <div class="product-price">
                                     <span><span class="product-price-sign">$</span><span class="product-price-text"><%= current_item.price %> €</span></span>
@@ -52,7 +43,7 @@
                                         <input class="quantity input-xlg" step="1" min="1" max="9" name="quantity" value="1" title="Quantity" type="number" />
                                         <span data-value="-" class="quantity-btn quantityMinus"></span>
                                     </div>
-                                    <button type="submit" class="btn btn-xlg btn-black"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Add to cart</button>
+                                    <button type="submit" class="btn btn-xlg btn-black"><i class="fa fa-shopping-bag" aria-hidden="true"></i><%=link_to "Add to cart", item_cart_items_path(current_item.id), method: :post %></button>
                                 </form>
 
                                 <%=link_to "Ajouter au panier", item_cart_items_path(current_item.id), method: :post %>
@@ -61,130 +52,11 @@
                                     
                                     <span>Category : <span class="category" itemprop="category">AJOUTER UNE CATEGORIE</span></span>
                                 </div>
-                                <div class="product-share">
-                                    <span>Share :</span>
-                                    <ul>
-                                        <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://nileforest.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="http://twitter.com/share?url=http://nileforest.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="http://plus.google.com/share?url=http://nileforest.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-                                        <li><a href="mailto:?subject=Check this http://nileforest.com/" target="_blank"><i class="fa fa-envelope"></i></a></li>
-                                        <li><a href="http://pinterest.com/pin/create/button/?url=http://nileforest.com/exampleImage.jpg" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-                                    </ul>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- End Product -->
-
-                
-
-                <!-- Product Carousel -->
-                <div class="container product-carousel">
-
-                    <!--Title-->
-                    <div class="row">
-                        <h3 class="page-title">Related Product</h3>
-                    </div>
-                    <!--Title-->
-
-                    <!--Product Slider-->
-                    <div class="product-item-4 owl-carousel owl-theme">
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="product-item">
-                                <div class="product-item-img">
-                                    <div class="product-item-img-wrap">
-                                        <%= image_tag Item.find(rand(Item.all.first.id..Item.all.last.id)).image_url, width: 200 %>
-                                    </div>
-                                    <div class="product-button">
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Cart"><i class="ti-shopping-cart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Quick View"><i class="ti-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-item-content">
-                                    <a class="tag">Men Fashion</a>
-                                    <a class="product-title">Coolpad Coll (4GB, 32GB) 13MP</a>
-                                    <div class="product-rating">
-                                        <div class="star-rating">
-                                            <span style="width: 60%;"></span>
-                                        </div>
-                                        <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                    </div>
-                                    <p class="product-description">When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.</p>
-                                    <div class="product-price">$199.00</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="product-item">
-                                <div class="product-item-img">
-                                    <div class="product-item-img-wrap">
-                                        <%= image_tag Item.find(rand(Item.all.first.id..Item.all.last.id)).image_url, width: 200 %>
-                                    </div>
-                                    <div class="sale-label">Sale</div>
-                                    <div class="product-button">
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Cart"><i class="ti-shopping-cart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Whishlist"><i class="ti-heart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Quick View"><i class="ti-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-item-content">
-                                    <a class="tag">Men Fashion</a>
-                                    <a class="product-title">Dcmr Enterprise Beige Analog Watch for Boys</a>
-                                    <div class="product-rating">
-                                        <div class="star-rating">
-                                            <span style="width: 60%;"></span>
-                                        </div>
-                                        <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                    </div>
-                                    <p class="product-description">When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.</p>
-                                    <div class="product-price"><del>$299.00</del>$199.00</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="product-item">
-                                <div class="product-item-img">
-                                    <div class="product-item-img-wrap">
-                                        <%= image_tag Item.find(rand(Item.all.first.id..Item.all.last.id)).image_url, width: 200 %>
-                                    </div>
-                                    <div class="product-button">
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Cart"><i class="ti-shopping-cart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Whishlist"><i class="ti-heart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Quick View"><i class="ti-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-item-content">
-                                    <a class="tag">Men Fashion</a>
-                                    <a class="product-title">Puma Strike Fashion Iii Idp Gray Running Shoes</a>
-                                    <div class="product-rating">
-                                        <div class="star-rating">
-                                            <span style="width: 60%;"></span>
-                                        </div>
-                                        <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                    </div>
-                                    <p class="product-description">When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.</p>
-                                    <div class="product-price"><del>$299.00</del>$199.00<span class="price-discount-label">-33%</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!--End Product Slider-->
-
-                </div>
-                <!-- End Product Carousel -->
-
             </section>
             <!--End Page Content -->
-
-
-
-        </div>
-        <!-- End Page Body Content Wraper -->

@@ -1,10 +1,3 @@
-<body>
-
-    
-        <!-- Page Body Content Wraper -->
-        <div class="page-content-wraper">
-            
-
             <!--Page Content -->
             <section class="content-page">
                 <div class="container">
@@ -18,27 +11,12 @@
                                 <form class="product-filter-divider">
                                     <label>20 Item</label>
                                 </form>
-                                <!--Product Sort By-->
-                                <form class="product-sort-by">
-                                    <label for="short-by">Short By</label>
-                                    <select name="short-by" id="short-by" class="nice-select-box">
-                                        <option value="default_sorting" selected="selected">Default sorting</option>
-                                        <option value="sort_by_popularity">Popularity</option>
-                                        <option value="sort_by_average_rating">Average rating</option>
-                                        <option value="sort_by_newness">New product</option>
-                                        <option value="price_low_to_high">Price: low to high</option>
-                                        <option value="price_high_to_low">Price: high to low</option>
-                                    </select>
-                                </form>
-
-
                             </div>
-
                             <!-- Product -->
                             <div class="row product-list-item">
                               <% all_items.each do |item| %>
                               <%@item = item %>
-                                <!-- items -->
+                                <!-- item -->
                                 <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
                                     <div class="product-item">
                                         <div class="product-item-img">
@@ -49,7 +27,6 @@
                                            
                                         </div>
                                         <div class="product-item-content">
-                                            <a class="tag">Men Fashion</a>
 												<%=link_to item.title, item_path(@item.id), class: 'product-title' %>
                                             <div class="product-rating">
                                                 <div class="star-rating">
@@ -64,7 +41,6 @@
                               <% end %>  
                             <!-- End Product -->
 
-                            
                         </div>
                         <!--End Product Content -->
 
@@ -72,13 +48,3 @@
                 </div>
             </section>
             <!--End Page Content -->
-
-        </div>
-        <!-- End Page Body Content Wraper -->
-
-        
-
-
-</body>
-</html>
-

@@ -24,3 +24,46 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+<body>
+<!-- Page Content -->
+            <section class="content-page">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-border-box">
+                                <form>
+                                    <h3 class="mb-15">Registered Customers</h3>
+                                    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                                    <p>Lorem ipsum dolor amet, conse adipiscing, eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <div class="form-field-wrapper">
+                                        <br /><label>Enter Your Email <span class="required">*</span></label>
+                                        <input id="author-email" class="input-lg form-full" name="author" placeholder="Enter Your Email Address" value="" size="30" aria-required="true" required="" type="email">
+                                    </div>
+                                    <div class="form-field-wrapper">
+                                        <label>Enter Your Password <span class="required">*</span></label>
+                                        <input id="author-pass" class="input-lg form-full" name="author-pass" placeholder="Enter Your Password" value="" size="30" aria-required="true" required="" type="password">
+                                    </div>
+                                    <div class="form-field-wrapper">
+                                        <input name="submit" id="submit" class="submit btn btn-lg btn-black" value="Sign In" type="submit">
+                                    </div>
+                                    <% end %>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-border-box">
+                                <form>
+                                    <h3 class="mb-15">New Customers</h3>
+                                    <p>Lorem ipsum dolor amet, conse adipiscing, eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <div class="form-field-wrapper">
+                                        <input name="submit" id="submit1" class="submit btn btn-lg btn-color" value="Create An Account" type="submit">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Page Content -->
+</body>

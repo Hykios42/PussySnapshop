@@ -8,4 +8,6 @@ module ItemsHelper
     Item.find(params[:id])
   end
 
+  
+
 end

@@ -1,9 +1,68 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h1><%= current_item.title %></h1>
-      <p><%= image_tag current_item.image_url, width: 200 %> <%= current_item.price %> € </p>
-      <p><em><%= current_item.description %><em></p>
-    </div>
-  </div>
-</div>
+<br>
+
+            <!--Page Content -->
+            <section class="content-page">
+                <!-- Product -->
+                <div id="product-detail" class="container">
+                    <div class="row">
+                        <!-- Product Image -->
+                        <div class="col-lg-6 col-md-6 col-sm-12 mb-30">
+                            <div class="product-page-image">
+                                <!-- Slick Image Slider -->
+                                <div class="product-image-slider product-image-gallery" id="product-image-gallery" data-pswp-uid="3">
+                                    <div class="item">
+                                        <a class="product-gallery-item" href="#" data-size="" data-med="#" data-med-size="">
+                                            <%= image_tag current_item.image_url, width: 200 %>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Product Image -->
+
+                        <!-- Product Content -->
+                        <div class="col-lg-6 col-md-6 col-sm-12 mb-30">
+                            <div class="product-page-content">
+                                <h3 class="product-title"><%= current_item.title %></h3>
+                                <div class="product-rating">
+                                    <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
+                                        <span style="width: 60%"></span>
+                                    </div>
+                                    
+                                </div>
+                                <div class="product-price">
+                                    <span><span class="product-price-sign">$</span><span class="product-price-text"><%= current_item.price %> €</span></span>
+                                </div>
+                                <p class="product-description">
+                                    <%= current_item.description %>
+                                </p>
+                                
+                                <form class="single-variation-wrap">
+                                    <div class="product-quantity">
+                                        <span data-value="+" class="quantity-btn quantityPlus"></span>
+                                        <input class="quantity input-xlg" step="1" min="1" max="9" name="quantity" value="1" title="Quantity" type="number" />
+                                        <span data-value="-" class="quantity-btn quantityMinus"></span>
+                                    </div>
+                                    <button type="submit" class="btn btn-xlg btn-black"><i class="fa fa-shopping-bag" aria-hidden="true"></i><%=link_to "Add to cart", item_cart_items_path(current_item.id), method: :post %></button>
+                                </form>
+
+                               
+                                
+                                <div class="product-meta">
+                                    
+                                    <span>Category : <span class="category" itemprop="category">AJOUTER UNE CATEGORIE</span></span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Product -->
+            </section>
+        <!--End Page Content -->
+
+     
+ 
+</body>
+
+

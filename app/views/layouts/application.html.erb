@@ -27,12 +27,135 @@
   </head>
 
   <body>
+  
+        <!--Topbar-->
+        <section class="topbar bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <p class="info"><i class="fa fa-headphones left"></i>+ 00 123 456 7890</p>
+                        <p class="info">Ending soon: Save up to 300 €!<span class="coupon">Code : HICH-HICH</span></p>
+                    </div>
+                    <div class="col-md-6 text-lg-right text-md-left">
+                        <ul class="links">
+                        <% if current_user %>
+                            <li class="">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user left hidden-md-up"></i><span class="hidden-sm-down">My Account</span></a>
+                                <div class="dropdown-menu">
+                                    <%= link_to "My Account", user_path(current_user.id), class: "dropdown-item" %>
+                                    <%= link_to "Checkout", user_path(current_user.id), class: "dropdown-item" %>
+                                    <div class="dropdown-divider"></div>
+                                    <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                                </div>
+                            </li>
+                        <% else %>
+                            <li class="">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user left hidden-md-up"></i><span class="hidden-sm-down">My Account</span></a>
+                                <div class="dropdown-menu">
+                                    <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
+                                    <%= link_to "Create an Account", new_user_registration_path, class: "dropdown-item" %>
+                                </div>
+                            </li>
+                        <% end %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Topbar -->
 
+        <!--Header-->
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <!--Logo-->
+                    <div class="col">
+                        <%= link_to image_tag('ecommerce/logo_dark.png'), root_path, class: 'logo' %>
+                    </div>
+
+                    
+
+                    
+                </div>
+                <br>
+
+            </div>
+
+
+            
+        </header>
+        <!-- End Header -->
+
+
+    
     <%= yield %>
 
 
 
-   
+   <!-- Footer -->
+        <footer class="footer">
+
+            
+
+            <!-- footer Info -->
+            <div class="container ptb-15 d-flex">
+                <div class="row justify-content-between">
+
+                    <!-- About -->
+                    <div class="col-lg-3 col-md-12 col-sm-12">
+                        <div class="footer-block about-us-block">
+                            <h5>About Us</h5>
+                            <p>PussySnapshot provides the best Pussy Snapshots around the world. We deliver everywhere in the world and beyond.</p>
+                            <ul class="footer-social-icon list-none-ib">
+                                <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+                    <!-- Links -->
+                    <div class="col-lg-2 col-md-4 col-sm-4">
+                        <div class="footer-block links">
+                            <h6>Informations</h6>
+                            <ul>
+                                <li><a href="login-register.html">My Account</a></li>
+                                <li><a href="login-register.html">Log In</a></li>
+                                <li><a href="login-register.html">Create an Account</a></li>
+                                <li><a href="checkout.html">Checkout</a></li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--Contact-->
+                    <div class="col-lg-3 col-md-12 col-sm-12">
+                        <div class="footer-block contact-block">
+                            <h6>Contact</h6>
+                            <ul>
+                                <li><i class="fa fa-map-marker" aria-hidden="true"></i>1 Wintergreen Dr. Huntley
+                                    <br>
+                                    IL 60142, Usa</li>
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:jimmy@poudlard.com">jimmy@poudlard.com</a></li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i>(013) 456789</li>
+                       
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+    </div>
+
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
   </body>
 </html>

@@ -1,0 +1,8 @@
+
+<h1>Afficher le panier du current_user</h1>
+<h2>index.html.erb</h2>
+
+ <% allUserCartItem.each do |item| %>
+  <p>card id = <%= item.cart_id %> </p>
+  <p>item id = <%= item.item_id %> </p>
+<% end %>

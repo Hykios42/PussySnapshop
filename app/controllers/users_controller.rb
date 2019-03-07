@@ -3,7 +3,11 @@ class UsersController < ApplicationController
   before_action :own_profile, only: [:show]
   
   def show
+    @order = Order.all
+    @item = Item.all
+    @orderItem = OrderItem.all
   end
+
 
   private
 

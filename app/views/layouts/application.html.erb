@@ -38,17 +38,32 @@
                     </div>
                     <div class="col-md-6 text-lg-right text-md-left">
                         <ul class="links">
-                            <li>
-                                <a href="login-register.html">My Account</a>
-                            </li>    
-                            <li>
-                                <a href="login-register.html">Log In</a>
+                        <% if current_user %>
+                            <li class="">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user left hidden-md-up"></i><span class="hidden-sm-down">My Account</span></a>
+                                <div class="dropdown-menu">
+                                    <%= link_to "My Account", user_path(current_user.id), class: "dropdown-item" %>
+                                    <%= link_to "Checkout", user_path(current_user.id), class: "dropdown-item" %>
+                                    <div class="dropdown-divider"></div>
+                                    <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                                </div>
                             </li>
-                            <li>
-                                <a href="login-register.html">Create an Account</a>
+                        <% else %>
+                            <li class="">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user left hidden-md-up"></i><span class="hidden-sm-down">My Account</span></a>
+                                <div class="dropdown-menu">
+                                    <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
+                                    <%= link_to "Create an Account", new_user_registration_path, class: "dropdown-item" %>
+                                </div>
                             </li>
-                             <li>
-                                <a href="checkout.html">Checkout</a>
+                        <% end %>
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-globe left hidden-md-up"></i><span class="hidden-sm-down">English</span></a>
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item">USD</a>
+                                    <a href="#" class="dropdown-item">EUR</a>
+                                    <a href="#" class="dropdown-item">GBP</a>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -63,9 +78,7 @@
                 <div class="row">
                     <!--Logo-->
                     <div class="col">
-                        <a class="logo" href="index.html">
-                           <%= image_tag "ecommerce/logo_dark.png" %>
-                        </a>
+                        <%= link_to image_tag('ecommerce/logo_dark.png'), root_path, class: 'logo' %>
                     </div>
 
                     
@@ -82,6 +95,7 @@
         <!-- End Header -->
 
 
+    
     <%= yield %>
 
 
@@ -144,6 +158,12 @@
             </div>
             
     </div>
+
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
   </body>
 </html>

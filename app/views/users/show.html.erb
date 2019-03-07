@@ -1,16 +1,40 @@
 <div class="container">
 
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
-    
-  <div class="row">
-    <div class="col">
-      <h1><%= User.find(params[:id]).email %></h1>
-      <p>  !!!!! afficher toutes les commandes </p>
-      <%= link_to "Edit my informations", edit_user_registration_path, :method => 'get', class: "btn btn-info"%>
+  <% if flash[:error].present? %>
+    <div id="error_explanation">
+      <p><%= flash[:error] %></p>
     </div>
-  </div>
-</div>
+  <% end %>
+  
+<div class="row">
+  <div class="col">
+    <h1><%= current_user.email %></h1>
+<p>
+<h2> Vos commandes: </h2>
+<br>
+    <% @item.each do |item| %>
+      <% @orderItem.each do |orderItem| %>
+        <% if (item.id == orderItem.item_id) %>
+        <% @order.each do |order| %>
+          <% if (order.id == orderItem.id) %>
+          <% if (order.user_id == current_user.id) %>
+            </br>
+                <%= image_tag item.image_url, width: 50 %>
+                Article: <%= item.title %> 
+                <%= item.price %> euro
+            </br>
+            <% end %>
+
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+
+</p>
+</br>
+      
+            
+        
+      <%= link_to "Edit my informations", edit_user_registration_path, :method => 'get', class: "btn btn-info"%>
+</br>

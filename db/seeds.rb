@@ -1,4 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
+9# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
@@ -46,7 +46,10 @@ end
 puts "Table créée"
 
 puts "Création de la table intermédiaire OrderItem"
-15.times do
-  order_item = OrderItem.create!(order_id: rand(Order.all.first.id..Order.all.last.id), item_id: rand(Item.all.first.id..Item.all.last.id))
+  jpp = 1;
+
+Order.all.last.id.times do
+  order_item = OrderItem.create!(order_id: jpp, item_id: rand(Item.all.first.id..Item.all.last.id))
+  jpp += 1;
 end
 puts "Table créée" 

@@ -1,55 +1,38 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: new_user_registration_path) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
-
-<body>
+<br>
 <!-- Page Content -->
             <section class="content-page">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-border-box">
-                                <form>
-                                    <h3 class="mb-15">Registered Customers</h3>
-                                    <p>Lorem ipsum dolor amet, conse adipiscing, eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <!-- PENSER A TOUJOURS VIRER LA BALISE FORM -->
+                                     <h3 class="mb-15">Create an account</h3>
+                                    <%= form_for(resource, as: resource_name, url: user_registration_path) do |f| %>
+                                      <%= render "devise/shared/error_messages", resource: resource %>
+                                    <p>Create an account if you want to buy our amazing Kittens pictures.</p>
                                     <div class="form-field-wrapper">
-                                        <label>Enter Your Email <span class="required">*</span></label>
-                                        <input id="author-email" class="input-lg form-full" name="author" placeholder="Enter Your Email Address" value="" size="30" aria-required="true" required="" type="email">
+                                        <%= f.label :email %>
+                                        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input-lg form-full" %> 
                                     </div>
                                     <div class="form-field-wrapper">
-                                        <label>Enter Your Password <span class="required">*</span></label>
-                                        <input id="author-pass" class="input-lg form-full" name="author-pass" placeholder="Enter Your Password" value="" size="30" aria-required="true" required="" type="password">
+                                        <%= f.label :password %>
+                                        <% if @minimum_password_length %>
+                                        <em>(<%= @minimum_password_length %> characters minimum)</em>
+                                        <% end %><br />
+                                        <%= f.password_field :password, autocomplete: "new-password", class: "input-lg form-full" %>
                                     </div>
                                     <div class="form-field-wrapper">
-                                        <input name="submit" id="submit" class="submit btn btn-lg btn-black" value="Sign In" type="submit">
+                                        <%= f.label :password_confirmation %>
+                                        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input-lg form-full" %>
                                     </div>
-                                </form>
+                                  
+                                    <div class="form-field-wrapper">
+                                        
+                                        <%= f.submit "Sign up", class: "submit btn btn-lg btn-black" %> 
+                                    </div>
+                                    <% end %>
+                                    <%= render "devise/shared/links" %>
+                                
                             </div>
                         </div>
                         
@@ -57,4 +40,3 @@
                 </div>
             </section>
             <!-- End Page Content -->
-</body>

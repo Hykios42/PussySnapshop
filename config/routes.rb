@@ -6,9 +6,11 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'items#index'
   
-  resources  :items, only: [:index, :show] do
-    resources :cart_item
+  resources  :items, only: [:index, :show]
+  resources  :users do
+    resources :cart, only: [:show]
   end
-  resources  :users, only: [:show]
+
   
+
 end

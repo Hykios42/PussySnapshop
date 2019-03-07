@@ -43,7 +43,7 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user left hidden-md-up"></i><span class="hidden-sm-down">My Account</span></a>
                                 <div class="dropdown-menu">
                                     <%= link_to "My Account", user_path(current_user.id), class: "dropdown-item" %>
-                                    <%= link_to "Checkout", user_path(current_user.id), class: "dropdown-item" %>
+                                    <%= link_to "Checkout", root_path, class: "dropdown-item" %>
                                     <div class="dropdown-divider"></div>
                                     <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
                                 </div>
@@ -102,7 +102,7 @@
                 <div class="row justify-content-between">
 
                     <!-- About -->
-                    <div class="col-lg-3 col-md-12 col-sm-12">
+                    <div class="col-lg-8 col-md-12 col-sm-12">
                         <div class="footer-block about-us-block">
                             <h5>About Us</h5>
                             <p>PussySnapshot provides the best Pussy Snapshots around the world. We deliver everywhere in the world and beyond.</p>
@@ -112,21 +112,6 @@
                                 <li><a href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
                                 <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
                                 <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    
-                    <!-- Links -->
-                    <div class="col-lg-2 col-md-4 col-sm-4">
-                        <div class="footer-block links">
-                            <h6>Informations</h6>
-                            <ul>
-                                <li><a href="login-register.html">My Account</a></li>
-                                <li><a href="login-register.html">Log In</a></li>
-                                <li><a href="login-register.html">Create an Account</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
-                               
                             </ul>
                         </div>
                     </div>

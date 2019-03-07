@@ -1,3 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1><%= current_item.title %></h1>
+      <p><%= image_tag current_item.image_url, width: 200 %> <%= current_item.price %> € </p>
+      <p><em><%= current_item.description %><em></p>
+
+
+
+<%=link_to "Ajouter au panier", item_cart_items_path(current_item.id), method: :post %>
+
+    </div>
+  </div>
+</div>
 
 
 <body>
@@ -46,7 +60,7 @@
                                         <input class="quantity input-xlg" step="1" min="1" max="9" name="quantity" value="1" title="Quantity" type="number" />
                                         <span data-value="-" class="quantity-btn quantityMinus"></span>
                                     </div>
-                                    <button type="submit" class="btn btn-xlg btn-black"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Add to cart</button>
+                                    <button type="submit" class="btn btn-xlg btn-black"><i class="fa fa-shopping-bag" aria-hidden="true"></i><%=link_to "Add to cart", item_cart_items_path(current_item.id), method: :post %></button>
                                 </form>
                                 
                                 <div class="product-meta">
@@ -61,6 +75,19 @@
                 <!-- End Product -->
             </section>
             <!--End Page Content -->
+<<<<<<< HEAD
      
  
 </body>
+=======
+
+
+
+        </div>
+        <!-- End Page Body Content Wraper -->
+
+        
+
+    
+</body>
+>>>>>>> f1a51f1be7df924dcbc3325a931039bf83b041b5

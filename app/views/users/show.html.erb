@@ -1,0 +1,16 @@
+<div class="container">
+
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+    
+  <div class="row">
+    <div class="col">
+      <h1><%= User.find(params[:id]).email %></h1>
+      <p>  !!!!! afficher toutes les commandes </p>
+      <%= link_to "Edit my informations", edit_user_registration_path, :method => 'get', class: "btn btn-info"%>
+    </div>
+  </div>
+</div>

@@ -1,18 +1,3 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <h1><%= current_item.title %></h1>
-      <p><%= image_tag current_item.image_url, width: 200 %> <%= current_item.price %> € </p>
-      <p><em><%= current_item.description %><em></p>
-
-        <%=link_to "Ajouter au panier", item_cart_items_path(current_item.id), method: :post %>
-
-    </div>
-  </div>
-</div>
-
-
-<body>
 <br>
         <!-- Page Body Content Wraper -->
         <div class="page-content-wraper">
@@ -29,7 +14,7 @@
                                 <!-- Slick Image Slider -->
                                 <div class="product-image-slider product-image-gallery" id="product-image-gallery" data-pswp-uid="3">
                                     <div class="item">
-                                        <a class="product-gallery-item" href="img/product-img/single/product_12547007_1.jpg" data-size="" data-med="img/product-img/single/product_12547007_1.jpg" data-med-size="">
+                                        <a class="product-gallery-item" href="current_item.image_url" data-size="" data-med="current_item.image_url" data-med-size="">
                                             <%= image_tag current_item.image_url, width: 200 %>
                                         </a>
                                     </div>
@@ -69,6 +54,8 @@
                                     </div>
                                     <button type="submit" class="btn btn-xlg btn-black"><i class="fa fa-shopping-bag" aria-hidden="true"></i>Add to cart</button>
                                 </form>
+
+                                <%=link_to "Ajouter au panier", item_cart_items_path(current_item.id), method: :post %>
                                 
                                 <div class="product-meta">
                                     
@@ -201,8 +188,3 @@
 
         </div>
         <!-- End Page Body Content Wraper -->
-
-        
-
-    
-</body>

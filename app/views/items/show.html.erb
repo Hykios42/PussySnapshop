@@ -5,9 +5,7 @@
       <p><%= image_tag current_item.image_url, width: 200 %> <%= current_item.price %> € </p>
       <p><em><%= current_item.description %><em></p>
 
-
-
-<%=link_to "Ajouter au panier", item_cart_items_path(current_item.id), method: :post %>
+        <%=link_to "Ajouter au panier", item_cart_items_path(current_item.id), method: :post %>
 
     </div>
   </div>
@@ -36,16 +34,13 @@
                                         </a>
                                     </div>
                                     
-
                                 </div>
                                 <!-- End Slick Image Slider -->
 
                                 <a href="javascript:void(0)" id="zoom-images-button" class="zoom-images-button"><i class="fa fa-expand" aria-hidden="true"></i></a>
 
-
                             </div>
 
-                            
                         </div>
                         <!-- End Product Image -->
 
@@ -77,7 +72,7 @@
                                 
                                 <div class="product-meta">
                                     
-                                    <span>Category : <span class="category" itemprop="category">Shoes</span></span>
+                                    <span>Category : <span class="category" itemprop="category">AJOUTER UNE CATEGORIE</span></span>
                                 </div>
                                 <div class="product-share">
                                     <span>Share :</span>
@@ -114,11 +109,10 @@
                             <div class="product-item">
                                 <div class="product-item-img">
                                     <div class="product-item-img-wrap">
-                                        <img src="img/product-img/product_125470001.jpg" alt="mazel" />
+                                        <%= image_tag Item.find(rand(Item.all.first.id..Item.all.last.id)).image_url, width: 200 %>
                                     </div>
                                     <div class="product-button">
                                         <a href="#" rel="tooltip" data-placement="right" title="Add To Cart"><i class="ti-shopping-cart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Whishlist"><i class="ti-heart"></i></a>
                                         <a href="#" rel="tooltip" data-placement="right" title="Quick View"><i class="ti-eye"></i></a>
                                     </div>
                                 </div>
@@ -132,7 +126,7 @@
                                         <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
                                     </div>
                                     <p class="product-description">When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.</p>
-                                    <div class="product-price"><del>$299.00</del>$199.00</div>
+                                    <div class="product-price">$199.00</div>
                                 </div>
                             </div>
                         </div>
@@ -142,7 +136,7 @@
                             <div class="product-item">
                                 <div class="product-item-img">
                                     <div class="product-item-img-wrap">
-                                        <img src="img/product-img/product_125470002.jpg" alt="mazel" />
+                                        <%= image_tag Item.find(rand(Item.all.first.id..Item.all.last.id)).image_url, width: 200 %>
                                     </div>
                                     <div class="sale-label">Sale</div>
                                     <div class="product-button">
@@ -171,7 +165,7 @@
                             <div class="product-item">
                                 <div class="product-item-img">
                                     <div class="product-item-img-wrap">
-                                        <img src="img/product-img/product_125470003.jpg" alt="mazel" />
+                                        <%= image_tag Item.find(rand(Item.all.first.id..Item.all.last.id)).image_url, width: 200 %>
                                     </div>
                                     <div class="product-button">
                                         <a href="#" rel="tooltip" data-placement="right" title="Add To Cart"><i class="ti-shopping-cart"></i></a>
@@ -190,203 +184,6 @@
                                     </div>
                                     <p class="product-description">When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.</p>
                                     <div class="product-price"><del>$299.00</del>$199.00<span class="price-discount-label">-33%</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="product-item">
-                                <div class="product-item-img">
-                                    <div class="product-item-img-wrap">
-                                        <img src="img/product-img/product_125470004.jpg" alt="mazel" />
-                                    </div>
-                                    <div class="new-label">New</div>
-                                    <div class="product-button">
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Cart"><i class="ti-shopping-cart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Whishlist"><i class="ti-heart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Quick View"><i class="ti-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-item-content">
-                                    <a class="tag">Men Fashion</a>
-                                    <a class="product-title">Mt-G Analog Digital Wrist Watch For Boys</a>
-                                    <div class="product-rating">
-                                        <div class="star-rating">
-                                            <span style="width: 60%;"></span>
-                                        </div>
-                                        <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                    </div>
-                                    <p class="product-description">When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.</p>
-                                    <div class="product-price"><del>$299.00</del>$199.00</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="product-item">
-                                <div class="product-item-img">
-                                    <div class="product-item-img-wrap">
-                                        <img src="img/product-img/product_125470005.jpg" alt="mazel" />
-                                    </div>
-                                    <div class="product-button">
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Cart"><i class="ti-shopping-cart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Whishlist"><i class="ti-heart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Quick View"><i class="ti-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-item-content">
-                                    <a class="tag">Men Fashion</a>
-                                    <a class="product-title">Coolpad Coll (4GB, 32GB) 13MP</a>
-                                    <div class="product-rating">
-                                        <div class="star-rating">
-                                            <span style="width: 60%;"></span>
-                                        </div>
-                                        <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                    </div>
-                                    <p class="product-description">When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.</p>
-                                    <div class="product-price"><del>$299.00</del>$199.00</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="product-item">
-                                <div class="product-item-img">
-                                    <div class="product-item-img-wrap">
-                                        <img src="img/product-img/product_125470001.jpg" alt="mazel" />
-                                    </div>
-                                    <div class="product-button">
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Cart"><i class="ti-shopping-cart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Whishlist"><i class="ti-heart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Quick View"><i class="ti-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-item-content">
-                                    <a class="tag">Men Fashion</a>
-                                    <a class="product-title">Coolpad Coll (4GB, 32GB) 13MP</a>
-                                    <div class="product-rating">
-                                        <div class="star-rating">
-                                            <span style="width: 60%;"></span>
-                                        </div>
-                                        <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                    </div>
-                                    <p class="product-description">When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.</p>
-                                    <div class="product-price"><del>$299.00</del>$199.00</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="product-item">
-                                <div class="product-item-img">
-                                    <div class="product-item-img-wrap">
-                                        <img src="img/product-img/product_125470002.jpg" alt="mazel" />
-                                    </div>
-                                    <div class="product-button">
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Cart"><i class="ti-shopping-cart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Whishlist"><i class="ti-heart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Quick View"><i class="ti-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-item-content">
-                                    <a class="tag">Men Fashion</a>
-                                    <a class="product-title">Dcmr Enterprise Beige Analog Watch for Boys</a>
-                                    <div class="product-rating">
-                                        <div class="star-rating">
-                                            <span style="width: 60%;"></span>
-                                        </div>
-                                        <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                    </div>
-                                    <p class="product-description">When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.</p>
-                                    <div class="product-price"><del>$299.00</del>$199.00</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="product-item">
-                                <div class="product-item-img">
-                                    <div class="product-item-img-wrap">
-                                        <img src="img/product-img/product_125470003.jpg" alt="mazel" />
-                                    </div>
-                                    <div class="product-button">
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Cart"><i class="ti-shopping-cart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Whishlist"><i class="ti-heart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Quick View"><i class="ti-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-item-content">
-                                    <a class="tag">Men Fashion</a>
-                                    <a class="product-title">Puma Strike Fashion Iii Idp Gray Running Shoes</a>
-                                    <div class="product-rating">
-                                        <div class="star-rating">
-                                            <span style="width: 60%;"></span>
-                                        </div>
-                                        <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                    </div>
-                                    <p class="product-description">When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.</p>
-                                    <div class="product-price"><del>$299.00</del>$199.00</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="product-item">
-                                <div class="product-item-img">
-                                    <div class="product-item-img-wrap">
-                                        <img src="img/product-img/product_125470004.jpg" alt="mazel" />
-                                    </div>
-                                    <div class="product-button">
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Cart"><i class="ti-shopping-cart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Whishlist"><i class="ti-heart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Quick View"><i class="ti-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-item-content">
-                                    <a class="tag">Men Fashion</a>
-                                    <a class="product-title">Mt-G Analog Digital Wrist Watch For Boys</a>
-                                    <div class="product-rating">
-                                        <div class="star-rating">
-                                            <span style="width: 60%;"></span>
-                                        </div>
-                                        <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                    </div>
-                                    <p class="product-description">When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.</p>
-                                    <div class="product-price"><del>$299.00</del>$199.00</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item -->
-                        <div class="item">
-                            <div class="product-item">
-                                <div class="product-item-img">
-                                    <div class="product-item-img-wrap">
-                                        <img src="img/product-img/product_125470005.jpg" alt="mazel" />
-                                    </div>
-                                    <div class="product-button">
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Cart"><i class="ti-shopping-cart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Add To Whishlist"><i class="ti-heart"></i></a>
-                                        <a href="#" rel="tooltip" data-placement="right" title="Quick View"><i class="ti-eye"></i></a>
-                                    </div>
-                                </div>
-                                <div class="product-item-content">
-                                    <a class="tag">Men Fashion</a>
-                                    <a class="product-title">Coolpad Coll (4GB, 32GB) 13MP</a>
-                                    <div class="product-rating">
-                                        <div class="star-rating">
-                                            <span style="width: 60%;"></span>
-                                        </div>
-                                        <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                    </div>
-                                    <p class="product-description">When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.</p>
-                                    <div class="product-price"><del>$299.00</del>$199.00</div>
                                 </div>
                             </div>
                         </div>

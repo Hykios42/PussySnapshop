@@ -125,6 +125,7 @@
             <!-- Cart Footer -->
         </div>
     </section>
+
     <!--Overlay-->
     <div class="sidebar_overlay"></div>
     <!-- End Sidebar Menu (Cart Menu) -------------------------------------------->
@@ -204,9 +205,7 @@
                 <div class="row">
                     <!--Logo-->
                     <div class="col">
-                        <a class="logo" href="index.html">
-                           <%= image_tag "ecommerce/logo_dark.png" %>
-                        </a>
+                        <%= link_to image_tag('ecommerce/logo_dark.png') + "Some text", root_path, class: 'logo' %>
                     </div>
 
                     <!--Search Bar-->

@@ -13,8 +13,6 @@
                         <div class="col-12">
                             
 
-                          
-
                             <!-- Product Filter -->
                             <div class="d-flex product-filter-content">
                                 <form class="product-filter-divider">
@@ -33,9 +31,6 @@
                                     </select>
                                 </form>
 
-                                
-
-                                
 
                             </div>
 
@@ -43,7 +38,7 @@
                             <div class="row product-list-item">
                               <% all_items.each do |item| %>
                               <%@item = item %>
-                                <!-- item.1 -->
+                                <!-- items -->
                                 <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
                                     <div class="product-item">
                                         <div class="product-item-img">
@@ -55,14 +50,12 @@
                                         </div>
                                         <div class="product-item-content">
                                             <a class="tag">Men Fashion</a>
-                                            <a class="product-title" href="product_detail.html"><%= item.title %></a>
+																						<%=link_to item.title, item_path(@item.id), class: 'product-title' %>
                                             <div class="product-rating">
                                                 <div class="star-rating">
                                                     <span style="width: 60%;"></span>
                                                 </div>
-                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
                                             </div>
-                                            <p class="product-description">When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.</p>
                                             <div class="product-price"><%= item.price %> €</div>
                                         </div>
                                     </div>

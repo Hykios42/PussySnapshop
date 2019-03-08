@@ -1,14 +1,62 @@
-<h1> Cart </h1>
+<!-- Page Content -->
+<section class="content-page">
+  <div class="container mb-80">
+    <div class="row">
+      <div class="col-sm-12">
+        <article class="post-8">
+          <form class="product-checkout mt-45">
+            <div class="row">        
+              <div class="col-md-8">
+                <div class="checkout-order-review">
+                  <h3 class="mb-15">Your order</h3>
+                    <div class="product-checkout-review-order">
+                      <div class="responsive-table">
+                        <table class="">
+                          <thead>
+                            <tr>
+                              <th class="product-name">Product</th>
+                              <th class="product-total">Total</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+													<% @total = 0 %>
+													<% @cartItem.each do |cartItem| %>
+													<% if (cartItem.cart_id == current_cart.id) %>
+														<% current_item = @item.find_by(id: cartItem.item_id) %>
+                            <tr class="cart_item">
+                              <td class="product-name"><%= current_item.title %> <strong> x 1</strong></td>
+                              <td class="product-total">
+                                <span class="product-price-amount amount"><span class="currency-sign">€</span><%= current_item.price %></span>
+																<% @total += current_item.price %>
+                              </td>
+                            </tr>
+														<% end %>
+													<% end %>
+                          </tbody>
+                          <tfoot>
+                            <tr class="order-total">
+                             	<th>Total</th>
+                                <td>
+                                  <span class="product-price-amount amount"><span class="currency-sign">€</span><%= @total %></span>
+                                </td>
+                              </tr>
+                            </tfoot>
+                          </table>
+                        </div>
 
-<p>
-   <% @cartItem.each do |cartItem| %>
-    <% if (cartItem.cart_id == current_cart.id) %>
-    </br>
-    <% current_item = @item.find_by(id: cartItem.item_id) %>
-    <%= image_tag current_item.image_url, width: 50 %>
-                Article: <%= current_item.title %> 
-                <%= current_item.price %> euro
-    </br>
-    <% end %>
-    <% end %>
-</p>
+                    <div class="product-checkout-payment">
+                      <div class="place-order">
+                        <a class="btn btn-xlg btn-color form-full" href="#">Place Order</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+      	</article>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Page Content -->

@@ -1,4 +1,5 @@
 class OrderController < ApplicationController
+
   def index
   end
 
@@ -8,27 +9,35 @@ class OrderController < ApplicationController
   end
 
   def create
- 	@item = Item.find(params[:item_id])
- 	@cart = Cart.find(user_id: current_user.id)
-  @amount = total * 100
+    @item = Item.find(params[:item_id])
+    @cart = Cart.find(user_id: current_user.id)
+    @amount = total * 100
 
-  customer = Stripe::Customer.create({
-    email: params[:stripeEmail],
-    source: params[:stripeToken],
-  })
+    customer = Stripe::Customer.create({
+      email: params[:stripeEmail],
+      source: params[:stripeToken],
+    })
 
-  charge = Stripe::Charge.create({
-    customer: customer.id,
-    amount: @amount,
-    description: 'Rails Stripe customer',
-    currency: 'eur',
-  })
+    charge = Stripe::Charge.create({
+      customer: customer.id,
+      amount: @amount,
+      description: 'Rails Stripe customer',
+      currency: 'eur',
+    })
 
-rescue Stripe::CardError => e
-  flash[:error] = e.message
-  redirect_to new_charge_path
+		new_order = Order.new(user_id: current_user.id)
+
+		if new_order.save
+			redirect_to root_path
+		else
+			redirect_to order_index_path
+    end
+    
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
+      redirect_to new_charge_path
+
   end
-
   private
 
   def total

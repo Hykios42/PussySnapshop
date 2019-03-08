@@ -7,8 +7,12 @@ Rails.application.routes.draw do
   root to: 'items#index'
   
   resources  :items, only: [:index, :show] do
-    resources :cart_item
+    resources :cart_item, only: [:create, :delete]
   end
-  resources  :users, only: [:show]
+  resources  :users do
+    resources :cart, only: [:show]
+  end
+
   
+
 end

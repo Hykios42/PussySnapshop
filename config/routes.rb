@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
- 
-  get 'order/index'
-  get 'order/new'
-  get 'order/create'
+
   devise_for :users
   root to: 'items#index'
   
@@ -13,6 +10,6 @@ Rails.application.routes.draw do
     resources :cart, only: [:show]
   end
 
-  
+  resources :order, only: [:index, :new, :create]
 
 end

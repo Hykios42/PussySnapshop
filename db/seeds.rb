@@ -7,6 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Item.destroy_all
+User.destroy_all
+Cart.destroy_all
+Order.destroy_all
+CartItem.destroy_all
+OrderItem.destroy_all
 
 puts "Création de produits"
 pic_count = 1

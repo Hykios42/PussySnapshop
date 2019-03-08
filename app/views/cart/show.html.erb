@@ -1,13 +1,13 @@
 <!-- Page Content -->
-<section class="content-page">
+<section class="content-page justify-content-center">
   <div class="container mb-80">
     <div class="row">
       <div class="col-sm-12">
         <article class="post-8">
           <form class="product-checkout mt-45">
             <div class="row">        
-              <div class="col-md-8">
-                <div class="checkout-order-review">
+              <div class="col-md-8  ">
+                <div class="checkout-order-review ">
                   <h3 class="mb-15">Your order</h3>
                     <div class="product-checkout-review-order">
                       <div class="responsive-table">
@@ -46,7 +46,21 @@
 
                     <div class="product-checkout-payment">
                       <div class="place-order">
-                        <a class="btn btn-xlg btn-color form-full" href="#">Place Order</a>
+                      <%= form_tag order_index_path do %>
+                        <article>
+                          <% if flash[:error].present? %>
+                            <div id="error_explanation">
+                              <p><%= flash[:error] %></p>
+                            </div>
+                          <% end %>
+                         
+                        </article>
+                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                        data-description="A month's subscription"
+                        data-amount= <% @amount %>
+                        data-locale="auto"></script>
+              <% end %>
                       </div>
                     </div>
                   </div>

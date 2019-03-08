@@ -43,7 +43,7 @@
                                 <input class="quantity input-xlg" step="1" min="1" max="9" name="quantity" value="1" title="Quantity" type="number" />
                                 <span data-value="-" class="quantity-btn quantityMinus"></span>
                             </div>
-                            <button type="submit" class="btn btn-xlg btn-black"><i class="fa fa-shopping-bag" aria-hidden="true"></i><%=link_to "Add to cart", items_path(@item.id), method: :post, class: "text-white" %></button>
+                            <button type="submit" class="btn btn-xlg btn-black"><i class="fa fa-shopping-bag" aria-hidden="true"></i><%=link_to " Add to cart", item_cart_items_path(current_item.id), method: :create, class: "text-white" %></button>
                         </form>
                         
                         <div class="product-meta">
@@ -58,9 +58,3 @@
         <!-- End Product -->
     </section>
 <!--End Page Content -->
-
-
-
-
-
-

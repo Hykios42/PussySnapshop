@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:show]
   before_action :own_profile, only: [:show]
+
   
   def show
     @order = Order.all

@@ -1,1 +1,14 @@
-<h1> ploo </h1>
+<h1> Cart </h1>
+
+<p>
+   <% @cartItem.each do |cartItem| %>
+    <% if (cartItem.cart_id == current_cart.id) %>
+    </br>
+    <% current_item = @item.find_by(id: cartItem.item_id) %>
+    <%= image_tag current_item.image_url, width: 50 %>
+                Article: <%= current_item.title %> 
+                <%= current_item.price %> euro
+    </br>
+    <% end %>
+    <% end %>
+</p>

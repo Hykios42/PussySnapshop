@@ -7,4 +7,8 @@ module ApplicationHelper
       when 'alert' then "alert alert-warning"
     end
   end
+
+  def current_cart
+  @cart_current = Cart.find_by(user_id: current_user)
+  end
 end

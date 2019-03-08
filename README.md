@@ -3,7 +3,7 @@
 ### Site vente des photos de chat.te les plus chaud.e.s de ta région
 ![](https://media.giphy.com/media/l0HlUxUu3CqVAbees/giphy.gif)
 
-### Le Trello du projet [=> Ici <=](https://trello.com/b/wJR30iaz/site-de-vente)
+### Liens en prod du projet [=> Ici <=](https://pussysnapshot-prod.herokuapp.com/)
 
 ## Description du projet 
 *Work in progress*
